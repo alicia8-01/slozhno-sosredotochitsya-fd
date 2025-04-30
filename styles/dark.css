@@ -5,12 +5,62 @@
 */
 
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --dekstop-version: 1024px;
+  --tablet-version: 768px;
+  --mobile-version: 375px;
+  --text-size: 18px;
+  --text-font: 'IBM Plex Mono';
+  --background-image: url('../images/cover-image-dark.png');
+  --title-color: #DB00FF;
+  --title-accent-color: #FF0070;
+  --decription-text-color: #000028;
+  --decription-color: #FF0070;
+  --section-text-color: #FF0070;
+  --paragraph-text-color: #F1B2CE;
+  --accent-color: #FF0070;
+  --button-color: #FF0070;
+  --button-hover-color: #FF007066;
+  --a-color: #F1B2CE;
+  --corners-color: #FF0070;
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-dark .heared__rec::before {
+  content: "REC";
+  inline-size: 52px;
+  block-size: 26px;
+  margin-right: -7px;
+  margin-top: 1px;
+}
+
+.theme-dark .heared__rec::after {
+  content: "";
+  inline-size: 9px;
+  block-size: 9px;
+  border: 2px solid var(--accent-color, #FF0070);
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color, #FF0070);
+  background: var(--accent-color, #FF0070);
+  margin-top: 8px;
+  margin-right: -19px;
+}
+
+@media (width <= 768px) {
+  .theme-dark .heared__rec::before {
+    margin-top: 2px;
+  }
+  
+  .theme-dark .heared__rec::after {
+    margin-top: 9px;
+  }
+}
+
+@media (width <= 375px) {
+  .theme-dark .heared__rec::before {
+    margin-top: -9px;
+  }
+  
+  .theme-dark .heared__rec::after {
+    margin-top: -1px;
+    margin-right: -29px;
+  }
 }

@@ -26,6 +26,10 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  font-family: var(--text-font, 'IBM Plex Mono');
 }
 
 picture {
@@ -39,4 +43,21 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+.page {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: 1fr;
+  /* padding: 20px 20px 0px 0px; */
+}
+
+@media (width <= 375px) {
 }
