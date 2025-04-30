@@ -25,43 +25,14 @@
   --corners-color: #FF0070;
 }
 
-.theme-dark .heared__rec::before {
-  content: "REC";
-  inline-size: 52px;
-  block-size: 26px;
-  margin-right: -7px;
-  margin-top: 1px;
-}
-
-.theme-dark .heared__rec::after {
-  content: "";
-  inline-size: 9px;
-  block-size: 9px;
-  border: 2px solid var(--accent-color, #FF0070);
-  border-radius: 50%;
-  box-shadow: 0px 0px 4px 2px var(--accent-color, #FF0070);
-  background: var(--accent-color, #FF0070);
-  margin-top: 8px;
-  margin-right: -19px;
-}
-
 @media (width <= 768px) {
-  .theme-dark .heared__rec::before {
-    margin-top: 2px;
-  }
-  
   .theme-dark .heared__rec::after {
-    margin-top: 9px;
+    margin-top: 7px;
   }
 }
 
 @media (width <= 375px) {
-  .theme-dark .heared__rec::before {
-    margin-top: -9px;
-  }
-  
   .theme-dark .heared__rec::after {
-    margin-top: -1px;
-    margin-right: -29px;
+    margin-top: 8px;
   }
 }

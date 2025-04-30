@@ -25,6 +25,10 @@
   --corners-color: #353430;
 }
 
+.theme-light .heared__rec {
+  display: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --dekstop-version: 1024px;
