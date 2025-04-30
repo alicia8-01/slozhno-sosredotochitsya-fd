@@ -92,7 +92,7 @@
   align-self: self-start;
   justify-self: self-end;
   position: absolute;
-  margin: 74px 20px 0px 513px;
+  margin: 76px 20px 0px 513px;
 }
 
 .main__content-section {
@@ -102,6 +102,7 @@
 .section {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  gap: 10px;
 }
 
 .section__title {
@@ -226,6 +227,7 @@ a:focus {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   justify-items: center;
+  margin-top: -20px;
 }
 
 .footer::before {
@@ -256,6 +258,10 @@ a:focus {
   margin-left: 20px;
 }
 
+.footer__title {
+  margin-top: 25px;
+}
+
 @media (width <= 768px) {
   .decorated-zone {
     block-size: 1024px;
@@ -264,11 +270,13 @@ a:focus {
   .header__theme-menu {
     justify-self: end;
     align-self: center;
+    margin-top: 40px;
   }
 
   .header__decription {
     grid-row: 3;
     margin-left: 384px;
+    margin-top: 135px;
   }
 
   .header__theme-menu-list {
@@ -278,6 +286,10 @@ a:focus {
 
   .title {
     font-size: 120px;
+  }
+
+  .section {
+    gap: 0px;
   }
 
   .section__title {
@@ -313,6 +325,10 @@ a:focus {
     block-size: 1024px;
     align-items: center;
   }
+
+  .footer__title {
+    margin-top: 0px;
+  }
 }
 
 @media (width <= 375px) {
@@ -332,6 +348,7 @@ a:focus {
 
   .header__theme-menu {
     align-self: center;
+    margin-top: 5px;
   }
 
   .header__theme-menu-list {
@@ -346,10 +363,11 @@ a:focus {
   .title {
     font-size: 116px;
     line-height: 83%;
+    margin-left: 10px;
   }
 
   .main__content-section {
-    margin: 40px 10px 0px 10px;
+    margin: 40px 0px 50px 10px;
   }
 
   .section {
@@ -362,6 +380,10 @@ a:focus {
 
   .section__content {
     inline-size: 355px;
+  }
+
+  .title-images {
+    margin-right: 10px;
   }
 
   .section__images {
@@ -385,10 +407,12 @@ a:focus {
   }
 
   .section__img-ice-cream {
+    width: 355px;
     height: 355px;
   }
 
   .section__img-tape {
+    width: 355px;
     height: 237px;
   }
 
@@ -403,7 +427,7 @@ a:focus {
   .footer {
     block-size: 667px;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 45px;
   }
 
   .footer::before {
@@ -414,5 +438,11 @@ a:focus {
   .footer::after {
     margin-bottom: 10px;
     margin-left: 10px;
+  }
+
+  .footer__title {
+    align-self: end;
+    margin-bottom: 64px;
+    margin-right: 10px;
   }
 }
