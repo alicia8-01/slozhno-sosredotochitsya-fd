@@ -12,6 +12,7 @@
   --text-line-height: 23.4px;
   --text-font: 'IBM Plex Mono';
   --background-image: url('../images/cover-image-light.png');
+  --background-color: #fff1f7;
   --title-color: #FFC2E6;
   --title-accent-color: #FF8DCB;
   --decription-text-color: #353430;
@@ -38,6 +39,7 @@
     --text-line-height: 23.4px;
     --text-font: 'IBM Plex Mono';
     --background-image: url('../images/cover-image-light.png');
+    --background-color: #fff1f7;
     --title-color: #FFC2E6;
     --title-accent-color: #FF8DCB;
     --decription-text-color: #353430;

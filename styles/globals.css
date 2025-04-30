@@ -44,16 +44,3 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
-
-.page {
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.header {
-  position: relative;
-  display: grid;
-  grid-template-rows: 1fr min-content 1fr;
-  grid-template-columns: 1fr;
-}

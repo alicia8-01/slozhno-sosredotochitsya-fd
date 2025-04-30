@@ -3,39 +3,24 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. 
   Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   max-inline-size: 1024px;
   inline-size: 100%;
   background-image: var(--background-image, url('../images/cover-image-dark.png'));
 }
 
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: 1fr;
+}
+
 .decorated-zone {
-  block-size: 768px;
-}
-
-.decorated-zone::before {
-  content: "";
-  position: absolute;
-  grid-row: 1;
-  align-self: self-start;
-  justify-self: self-end;
-  inline-size: 25px;
-  block-size: 25px;
-  border-right: solid var(--corners-color, #FF0070) 1px;
-  border-top: solid var(--corners-color, #FF0070) 1px;
-  margin-right: 20px;
-  margin-top: 20px;
-}
-
-.decorated-zone::after {
-  content: "";
-  grid-row: 3;
-  align-self: self-end;
-  inline-size: 25px;
-  block-size: 25px;
-  border-left: solid var(--corners-color, #FF0070) 1px;
-  border-bottom: solid var(--corners-color, #FF0070) 1px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  min-block-size: 668px;
+  block-size: 100vh;
 }
 
 .header__theme-menu {
@@ -92,6 +77,7 @@
 
 .header__theme-menu-button_active {
   border: solid var(--button-color, #FF0070) 1px;
+  pointer-events: none;
 }
 
 .title {
@@ -121,6 +107,7 @@
 }
 
 .section__title {
+  inline-size: 315px;
   font-size: var(--text-size, 18px);
   color: var(--section-text-color, #FF0070);
   font-family: var(--text-font, 'IBM Plex Mono');
@@ -238,14 +225,15 @@ a:focus {
 }
 
 .footer {
-  block-size: 768px;
+  min-block-size: 668px;
+  block-size: 100vh;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   justify-items: center;
   margin-top: -20px;
 }
 
-.footer::before {
+.corners::before {
   content: "";
   grid-row: 1;
   position: absolute;
@@ -259,7 +247,7 @@ a:focus {
   margin-top: 20px;
 }
 
-.footer::after {
+.corners::after {
   content: "";
   grid-row: 3;
   position: absolute;
@@ -279,7 +267,7 @@ a:focus {
 
 @media (width <= 768px) {
   .decorated-zone {
-    block-size: 1024px;
+    min-height: 1024px;
   }
 
   .header__theme-menu {
@@ -300,7 +288,7 @@ a:focus {
   }
 
   .title {
-    font-size: 120px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .section {
@@ -337,7 +325,7 @@ a:focus {
   }
 
   .footer {
-    block-size: 1024px;
+    min-height: 1024px;
     align-items: center;
   }
 
@@ -353,7 +341,7 @@ a:focus {
   }
 
   .decorated-zone {
-    block-size: 668px;
+    min-height: 668px;
   }
 
   .decorated-zone::before {
@@ -381,7 +369,7 @@ a:focus {
   }
 
   .title {
-    font-size: 116px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     line-height: 83%;
     margin-left: 10px;
   }
@@ -445,7 +433,7 @@ a:focus {
   }
 
   .footer {
-    block-size: 667px;
+    min-height: 667px;
     align-items: center;
     margin-top: 45px;
   }
