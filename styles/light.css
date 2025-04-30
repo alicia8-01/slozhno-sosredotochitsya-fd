@@ -9,6 +9,7 @@
   --tablet-version: 768px;
   --mobile-version: 375px;
   --text-size: 18px;
+  --text-line-height: 23.4px;
   --text-font: 'IBM Plex Mono';
   --background-image: url('../images/cover-image-light.png');
   --title-color: #FFC2E6;

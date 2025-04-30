@@ -125,6 +125,7 @@
 .title-decor {
   font-family: var(--text-font, 'IBM Plex Mono');
   font-size: var(--text-size, 18px);
+  line-height: var(--text-line-height, 23.4px);
   color: var(--decription-text-color, #000028);
   background-color: var(--decription-color, #FF0070);
   font-weight: 800;
@@ -144,6 +145,7 @@
 .paragraph {
   font-size: var(--text-size, 18px);
   font-family: var(--text-font, 'IBM Plex Mono');
+  line-height: var(--text-line-height, 23.4px);
   color: var(--paragraph-text-color, #F1B2CE);
 }
 
@@ -221,7 +223,6 @@ a:focus {
 
 .footer {
   block-size: 768px;
-  margin-top: -20px;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   justify-items: center;
