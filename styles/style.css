@@ -323,8 +323,9 @@ a:focus {
 
 @media (width <= 375px) {
   .heared__rec {
-    margin: 11px 20px 0px 0px;
-  } 
+    margin-top: 11px;
+    margin-right: 20px;
+  }
 
   .decorated-zone {
     min-height: 668px;
@@ -424,12 +425,12 @@ a:focus {
     margin-top: 45px;
   }
 
-  .footer::before {
+  .corners::before {
     margin-right: 10px;
     margin-top: 10px;
   }
   
-  .footer::after {
+  .corners::after {
     margin-bottom: 10px;
     margin-left: 10px;
   }
