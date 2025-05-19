@@ -7,7 +7,6 @@
   background-size: cover;
   background-attachment: fixed;
   background-color: var(--background-color, #000028);
-  max-inline-size: 1024px;
   inline-size: 100%;
   background-image: var(--background-image, url('../images/cover-image-dark.png'));
 }
@@ -64,7 +63,7 @@
 
 .title {
   grid-row: 2;
-  font-size: 157px;
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   color: var(--title-color, #DB00FF);
   font-family: var(--text-font, 'IBM Plex Mono', monospace, sans-serif);
   text-shadow: 4px 4px 0 var(--title-accent-color, #FF0070);
@@ -74,7 +73,7 @@
   grid-row: 3;
   align-self: self-start;
   justify-self: self-end;
-  position: absolute;
+  position: relative;
   margin: 76px 20px 0px 513px;
 }
 
@@ -151,13 +150,16 @@
 }
 
 .img-sunset {
-  inline-size: 649.5px;
   grid-area: sunset;
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
 
 .section__img-ice-cream {
-  width: 100%;
-  height: 595px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
   overflow: hidden;
   grid-area: ice-cream;
 }
@@ -170,8 +172,9 @@
 }
 
 .section__img-tape {
-  width: 100%;
-  height: 768px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
   overflow: hidden;
   grid-area: tape;
 }
@@ -184,13 +187,17 @@
 }
 
 .img-books {
-  inline-size: 315px;
   grid-area: books;
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
 
 .img-street {
-  inline-size: 648px;
   grid-area: street;
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
 
 .text-shadow {
@@ -209,6 +216,7 @@ a:hover {
 
 a:focus {
   border: solid var(--a-color, #F1B2CE) 1px;
+  outline: none;
 }
 
 .footer {
@@ -291,26 +299,6 @@ a:focus {
     grid-template-columns: 1fr;
   }
 
-  .img-sunset {
-    inline-size: 479px;
-  }
-
-  .section__img-ice-cream {
-    height: 442px;
-  }
-
-  .section__img-tape {
-    height: 568px;
-  }
-
-  .img-books {
-    inline-size: 230px;
-  }
-
-  .img-street {
-    inline-size: 479px;
-  }
-
   .footer {
     min-height: 1024px;
     align-items: center;
@@ -362,7 +350,7 @@ a:focus {
   }
 
   .main__content-section {
-    margin: 40px 0px 50px 10px;
+    margin: 40px 10px 50px 10px;
   }
 
   .section {
@@ -377,10 +365,6 @@ a:focus {
     inline-size: 355px;
   }
 
-  .title-images {
-    margin-right: 10px;
-  }
-
   .section__images {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -393,29 +377,27 @@ a:focus {
     margin-top: 10px;
   }
 
-  .main__article {
-    inline-size: 355px;
-  }
-
-  .img-sunset {
-    inline-size: 355px;
-  }
-
   .section__img-ice-cream {
-    width: 355px;
-    height: 355px;
+    margin-bottom: -2px;
+  }
+
+  .img-ice-cream {
+    height: auto;
   }
 
   .section__img-tape {
-    width: 355px;
-    height: 237px;
+    margin-bottom: -5px;
   }
 
-  .img-books {
-    inline-size: 355px;
+  .img-tape {
+    height: auto;
   }
 
   .img-street {
+    margin-bottom: -9px;
+  }
+
+  .main__article {
     inline-size: 355px;
   }
 
