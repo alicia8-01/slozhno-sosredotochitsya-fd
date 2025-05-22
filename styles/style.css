@@ -311,14 +311,33 @@ a:focus {
   }
 }
 
+@media (width <= 623px) {
+  .decorated-zone {
+    min-height: 668px;
+  }
+
+  .header__theme-menu {
+    margin-top: 5px;
+  }
+
+  .title {
+    line-height: 83%;
+    margin-left: 10px;
+  }
+
+  .header__decription {
+    margin: 35px 20px 0px 10px;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (width <= 375px) {
   .heared__rec {
     margin-top: 11px;
     margin-right: 20px;
-  }
-
-  .decorated-zone {
-    min-height: 668px;
   }
 
   .decorated-zone::before {
@@ -333,7 +352,6 @@ a:focus {
 
   .header__theme-menu {
     align-self: center;
-    margin-top: 5px;
   }
 
   .header__theme-menu-list {
@@ -347,16 +365,10 @@ a:focus {
 
   .title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    line-height: 83%;
-    margin-left: 10px;
   }
 
   .main__content-section {
     margin: 40px 10px 50px 10px;
-  }
-
-  .section {
-    grid-template-columns: 1fr;
   }
 
   .section__title {
